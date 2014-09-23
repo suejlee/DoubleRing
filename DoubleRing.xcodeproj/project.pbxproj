@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD06E1CF19CEA1B300BB21A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1CE19CEA1B300BB21A1 /* main.m */; };
+		BD06E1D219CEA1B300BB21A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1D119CEA1B300BB21A1 /* AppDelegate.m */; };
+		BD06E1D519CEA1B300BB21A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1D419CEA1B300BB21A1 /* ViewController.m */; };
+		BD06E1D819CEA1B300BB21A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD06E1D619CEA1B300BB21A1 /* Main.storyboard */; };
+		BD06E1DA19CEA1B300BB21A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD06E1D919CEA1B300BB21A1 /* Images.xcassets */; };
+		BD06E1DD19CEA1B300BB21A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD06E1DB19CEA1B300BB21A1 /* LaunchScreen.xib */; };
+		BD06E1E919CEA1B300BB21A1 /* DoubleRingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1E819CEA1B300BB21A1 /* DoubleRingTests.m */; };
+		BD06E20B19CEA1C600BB21A1 /* RingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1F919CEA1C600BB21A1 /* RingViewController.m */; };
+		BD06E20C19CEA1C600BB21A1 /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FB19CEA1C600BB21A1 /* M13ProgressViewRing.m */; };
+		BD06E20D19CEA1C600BB21A1 /* SegmentedRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FD19CEA1C600BB21A1 /* SegmentedRingViewController.m */; };
+		BD06E20E19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FF19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.m */; };
+		BD06E20F19CEA1C600BB21A1 /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E20119CEA1C600BB21A1 /* M13ProgressView.m */; };
+		BD06E21019CEA1C600BB21A1 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E20319CEA1C600BB21A1 /* StaticTableViewController.m */; };
+		BD06E21119CEA1C600BB21A1 /* DoubleRingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E20519CEA1C600BB21A1 /* DoubleRingView.m */; };
+		BD06E21219CEA1C600BB21A1 /* DoubleRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E20719CEA1C600BB21A1 /* DoubleRingViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD06E1E319CEA1B300BB21A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD06E1C119CEA1B300BB21A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD06E1C819CEA1B300BB21A1;
+			remoteInfo = DoubleRing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD06E1C919CEA1B300BB21A1 /* DoubleRing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleRing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD06E1CD19CEA1B300BB21A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD06E1CE19CEA1B300BB21A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD06E1D019CEA1B300BB21A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD06E1D119CEA1B300BB21A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD06E1D319CEA1B300BB21A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BD06E1D419CEA1B300BB21A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BD06E1D719CEA1B300BB21A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD06E1D919CEA1B300BB21A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD06E1DC19CEA1B300BB21A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BD06E1E219CEA1B300BB21A1 /* DoubleRingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleRingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD06E1E719CEA1B300BB21A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD06E1E819CEA1B300BB21A1 /* DoubleRingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleRingTests.m; sourceTree = "<group>"; };
+		BD06E1F819CEA1C600BB21A1 /* RingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingViewController.h; sourceTree = "<group>"; };
+		BD06E1F919CEA1C600BB21A1 /* RingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingViewController.m; sourceTree = "<group>"; };
+		BD06E1FA19CEA1C600BB21A1 /* M13ProgressViewRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ProgressViewRing.h; sourceTree = "<group>"; };
+		BD06E1FB19CEA1C600BB21A1 /* M13ProgressViewRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressViewRing.m; sourceTree = "<group>"; };
+		BD06E1FC19CEA1C600BB21A1 /* SegmentedRingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedRingViewController.h; sourceTree = "<group>"; };
+		BD06E1FD19CEA1C600BB21A1 /* SegmentedRingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SegmentedRingViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BD06E1FE19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = M13ProgressViewSegmentedRing.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BD06E1FF19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = M13ProgressViewSegmentedRing.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BD06E20019CEA1C600BB21A1 /* M13ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ProgressView.h; sourceTree = "<group>"; };
+		BD06E20119CEA1C600BB21A1 /* M13ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressView.m; sourceTree = "<group>"; };
+		BD06E20219CEA1C600BB21A1 /* StaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
+		BD06E20319CEA1C600BB21A1 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
+		BD06E20419CEA1C600BB21A1 /* DoubleRingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DoubleRingView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BD06E20519CEA1C600BB21A1 /* DoubleRingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DoubleRingView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BD06E20619CEA1C600BB21A1 /* DoubleRingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleRingViewController.h; sourceTree = "<group>"; };
+		BD06E20719CEA1C600BB21A1 /* DoubleRingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DoubleRingViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD06E1C619CEA1B300BB21A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD06E1DF19CEA1B300BB21A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD06E1C019CEA1B300BB21A1 = {
+			isa = PBXGroup;
+			children = (
+				BD06E1CB19CEA1B300BB21A1 /* DoubleRing */,
+				BD06E1E519CEA1B300BB21A1 /* DoubleRingTests */,
+				BD06E1CA19CEA1B300BB21A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD06E1CA19CEA1B300BB21A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD06E1C919CEA1B300BB21A1 /* DoubleRing.app */,
+				BD06E1E219CEA1B300BB21A1 /* DoubleRingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD06E1CB19CEA1B300BB21A1 /* DoubleRing */ = {
+			isa = PBXGroup;
+			children = (
+				BD06E1F819CEA1C600BB21A1 /* RingViewController.h */,
+				BD06E1F919CEA1C600BB21A1 /* RingViewController.m */,
+				BD06E1FA19CEA1C600BB21A1 /* M13ProgressViewRing.h */,
+				BD06E1FB19CEA1C600BB21A1 /* M13ProgressViewRing.m */,
+				BD06E1FC19CEA1C600BB21A1 /* SegmentedRingViewController.h */,
+				BD06E1FD19CEA1C600BB21A1 /* SegmentedRingViewController.m */,
+				BD06E1FE19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.h */,
+				BD06E1FF19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.m */,
+				BD06E20019CEA1C600BB21A1 /* M13ProgressView.h */,
+				BD06E20119CEA1C600BB21A1 /* M13ProgressView.m */,
+				BD06E20219CEA1C600BB21A1 /* StaticTableViewController.h */,
+				BD06E20319CEA1C600BB21A1 /* StaticTableViewController.m */,
+				BD06E20419CEA1C600BB21A1 /* DoubleRingView.h */,
+				BD06E20519CEA1C600BB21A1 /* DoubleRingView.m */,
+				BD06E20619CEA1C600BB21A1 /* DoubleRingViewController.h */,
+				BD06E20719CEA1C600BB21A1 /* DoubleRingViewController.m */,
+				BD06E1D019CEA1B300BB21A1 /* AppDelegate.h */,
+				BD06E1D119CEA1B300BB21A1 /* AppDelegate.m */,
+				BD06E1D319CEA1B300BB21A1 /* ViewController.h */,
+				BD06E1D419CEA1B300BB21A1 /* ViewController.m */,
+				BD06E1D619CEA1B300BB21A1 /* Main.storyboard */,
+				BD06E1D919CEA1B300BB21A1 /* Images.xcassets */,
+				BD06E1DB19CEA1B300BB21A1 /* LaunchScreen.xib */,
+				BD06E1CC19CEA1B300BB21A1 /* Supporting Files */,
+			);
+			path = DoubleRing;
+			sourceTree = "<group>";
+		};
+		BD06E1CC19CEA1B300BB21A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD06E1CD19CEA1B300BB21A1 /* Info.plist */,
+				BD06E1CE19CEA1B300BB21A1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD06E1E519CEA1B300BB21A1 /* DoubleRingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD06E1E819CEA1B300BB21A1 /* DoubleRingTests.m */,
+				BD06E1E619CEA1B300BB21A1 /* Supporting Files */,
+			);
+			path = DoubleRingTests;
+			sourceTree = "<group>";
+		};
+		BD06E1E619CEA1B300BB21A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD06E1E719CEA1B300BB21A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD06E1C819CEA1B300BB21A1 /* DoubleRing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD06E1EC19CEA1B300BB21A1 /* Build configuration list for PBXNativeTarget "DoubleRing" */;
+			buildPhases = (
+				BD06E1C519CEA1B300BB21A1 /* Sources */,
+				BD06E1C619CEA1B300BB21A1 /* Frameworks */,
+				BD06E1C719CEA1B300BB21A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoubleRing;
+			productName = DoubleRing;
+			productReference = BD06E1C919CEA1B300BB21A1 /* DoubleRing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD06E1E119CEA1B300BB21A1 /* DoubleRingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD06E1EF19CEA1B300BB21A1 /* Build configuration list for PBXNativeTarget "DoubleRingTests" */;
+			buildPhases = (
+				BD06E1DE19CEA1B300BB21A1 /* Sources */,
+				BD06E1DF19CEA1B300BB21A1 /* Frameworks */,
+				BD06E1E019CEA1B300BB21A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD06E1E419CEA1B300BB21A1 /* PBXTargetDependency */,
+			);
+			name = DoubleRingTests;
+			productName = DoubleRingTests;
+			productReference = BD06E1E219CEA1B300BB21A1 /* DoubleRingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD06E1C119CEA1B300BB21A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Catinea;
+				TargetAttributes = {
+					BD06E1C819CEA1B300BB21A1 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					BD06E1E119CEA1B300BB21A1 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = BD06E1C819CEA1B300BB21A1;
+					};
+				};
+			};
+			buildConfigurationList = BD06E1C419CEA1B300BB21A1 /* Build configuration list for PBXProject "DoubleRing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD06E1C019CEA1B300BB21A1;
+			productRefGroup = BD06E1CA19CEA1B300BB21A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD06E1C819CEA1B300BB21A1 /* DoubleRing */,
+				BD06E1E119CEA1B300BB21A1 /* DoubleRingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD06E1C719CEA1B300BB21A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD06E1D819CEA1B300BB21A1 /* Main.storyboard in Resources */,
+				BD06E1DD19CEA1B300BB21A1 /* LaunchScreen.xib in Resources */,
+				BD06E1DA19CEA1B300BB21A1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD06E1E019CEA1B300BB21A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD06E1C519CEA1B300BB21A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD06E20E19CEA1C600BB21A1 /* M13ProgressViewSegmentedRing.m in Sources */,
+				BD06E20C19CEA1C600BB21A1 /* M13ProgressViewRing.m in Sources */,
+				BD06E1D519CEA1B300BB21A1 /* ViewController.m in Sources */,
+				BD06E20F19CEA1C600BB21A1 /* M13ProgressView.m in Sources */,
+				BD06E1D219CEA1B300BB21A1 /* AppDelegate.m in Sources */,
+				BD06E21219CEA1C600BB21A1 /* DoubleRingViewController.m in Sources */,
+				BD06E1CF19CEA1B300BB21A1 /* main.m in Sources */,
+				BD06E21119CEA1C600BB21A1 /* DoubleRingView.m in Sources */,
+				BD06E20B19CEA1C600BB21A1 /* RingViewController.m in Sources */,
+				BD06E21019CEA1C600BB21A1 /* StaticTableViewController.m in Sources */,
+				BD06E20D19CEA1C600BB21A1 /* SegmentedRingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD06E1DE19CEA1B300BB21A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD06E1E919CEA1B300BB21A1 /* DoubleRingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD06E1E419CEA1B300BB21A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD06E1C819CEA1B300BB21A1 /* DoubleRing */;
+			targetProxy = BD06E1E319CEA1B300BB21A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD06E1D619CEA1B300BB21A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD06E1D719CEA1B300BB21A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD06E1DB19CEA1B300BB21A1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD06E1DC19CEA1B300BB21A1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD06E1EA19CEA1B300BB21A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD06E1EB19CEA1B300BB21A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD06E1ED19CEA1B300BB21A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoubleRing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD06E1EE19CEA1B300BB21A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoubleRing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD06E1F019CEA1B300BB21A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DoubleRingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubleRing.app/DoubleRing";
+			};
+			name = Debug;
+		};
+		BD06E1F119CEA1B300BB21A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DoubleRingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubleRing.app/DoubleRing";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD06E1C419CEA1B300BB21A1 /* Build configuration list for PBXProject "DoubleRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD06E1EA19CEA1B300BB21A1 /* Debug */,
+				BD06E1EB19CEA1B300BB21A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD06E1EC19CEA1B300BB21A1 /* Build configuration list for PBXNativeTarget "DoubleRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD06E1ED19CEA1B300BB21A1 /* Debug */,
+				BD06E1EE19CEA1B300BB21A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD06E1EF19CEA1B300BB21A1 /* Build configuration list for PBXNativeTarget "DoubleRingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD06E1F019CEA1B300BB21A1 /* Debug */,
+				BD06E1F119CEA1B300BB21A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD06E1C119CEA1B300BB21A1 /* Project object */;
+}
