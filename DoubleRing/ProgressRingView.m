@@ -14,10 +14,10 @@
 @property (nonatomic, assign) CGFloat animationToValue;
 @property (nonatomic, assign) CFTimeInterval animationStartTime;
 @property (nonatomic, strong) CADisplayLink *displayLink;
-@property (nonatomic, retain) CAShapeLayer *progressLayer;
-@property (nonatomic, retain) CAShapeLayer *progressSecondLayer;
-@property (nonatomic, retain) CAShapeLayer *backgroundSecondLayer;
-@property (nonatomic, retain) CAShapeLayer *backgroundLayer;
+@property (nonatomic, retain) CAShapeLayer *progressOutLayer;
+@property (nonatomic, retain) CAShapeLayer *progressInLayour;
+@property (nonatomic, retain) CAShapeLayer *backgroundInLayour;
+@property (nonatomic, retain) CAShapeLayer *backgroundOutLayer;
 @property (nonatomic, assign) CGFloat backgroundLineWidth;
 @property (nonatomic, assign) CGFloat progressLineWidth;
 
@@ -70,36 +70,36 @@
     _percentageFormatter.numberStyle = NSNumberFormatterPercentStyle;
     
     //Set up the background layer
-    _backgroundLayer = [CAShapeLayer layer];
-    _backgroundLayer.strokeColor = [UIColor blackColor].CGColor;
-    _backgroundLayer.fillColor = [UIColor clearColor].CGColor;
-    _backgroundLayer.lineCap = kCALineCapRound;
-    _backgroundLayer.lineWidth = _backgroundLineWidth;
-    [self.layer addSublayer:_backgroundLayer];
+    _backgroundOutLayer = [CAShapeLayer layer];
+    _backgroundOutLayer.strokeColor = [UIColor blackColor].CGColor;
+    _backgroundOutLayer.fillColor = [UIColor clearColor].CGColor;
+    _backgroundOutLayer.lineCap = kCALineCapRound;
+    _backgroundOutLayer.lineWidth = _backgroundLineWidth;
+    [self.layer addSublayer:_backgroundOutLayer];
     
-    _backgroundSecondLayer = [CAShapeLayer layer];
-    _backgroundSecondLayer.strokeColor = [UIColor blackColor].CGColor;
-    _backgroundSecondLayer.fillColor = [UIColor clearColor].CGColor;
-    _backgroundSecondLayer.lineCap = kCALineCapRound;
-    _backgroundSecondLayer.lineWidth = _backgroundLineWidth;
-    [self.layer addSublayer:_backgroundSecondLayer];
+    _backgroundInLayour = [CAShapeLayer layer];
+    _backgroundInLayour.strokeColor = [UIColor blackColor].CGColor;
+    _backgroundInLayour.fillColor = [UIColor clearColor].CGColor;
+    _backgroundInLayour.lineCap = kCALineCapRound;
+    _backgroundInLayour.lineWidth = _backgroundLineWidth;
+    [self.layer addSublayer:_backgroundInLayour];
     
     //Set up the progress layer
-    _progressLayer = [CAShapeLayer layer];
-    _progressLayer.strokeColor = [UIColor greenColor].CGColor;
-    _progressLayer.fillColor = nil;
-    _progressLayer.lineCap = kCALineCapRound;
-    _progressLayer.lineWidth = _progressLineWidth;
-    [self.layer addSublayer:_progressLayer];
+    _progressOutLayer = [CAShapeLayer layer];
+    _progressOutLayer.strokeColor = [UIColor greenColor].CGColor;
+    _progressOutLayer.fillColor = nil;
+    _progressOutLayer.lineCap = kCALineCapRound;
+    _progressOutLayer.lineWidth = _progressLineWidth;
+    [self.layer addSublayer:_progressOutLayer];
     
 
     //Set up the progress layer
-    _progressSecondLayer = [CAShapeLayer layer];
-    _progressSecondLayer.strokeColor = [UIColor purpleColor].CGColor;
-    _progressSecondLayer.fillColor = nil;
-    _progressSecondLayer.lineCap = kCALineCapRound;
-    _progressSecondLayer.lineWidth = _progressLineWidth;
-    [self.layer addSublayer:_progressSecondLayer];
+    _progressInLayour = [CAShapeLayer layer];
+    _progressInLayour.strokeColor = [UIColor purpleColor].CGColor;
+    _progressInLayour.fillColor = nil;
+    _progressInLayour.lineCap = kCALineCapRound;
+    _progressInLayour.lineWidth = _progressLineWidth;
+    [self.layer addSublayer:_progressInLayour];
     
     //Set the label
     _percentageLabel = [[UILabel alloc] init];
@@ -144,8 +144,7 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         CGFloat dt = (displayLink.timestamp - _animationStartTime) / self.animationDuration;
-        if (dt >= 1.0) {
-            //Order is important! Otherwise concurrency will cause errors, because setProgress: will detect an animation in progress and try to stop it by itself. Once over one, set to actual progress amount. Animation is over.
+        if (dt >= 1.0) { // where it stops
             [self.displayLink removeFromRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
             self.displayLink = nil;
             [super setProgress:_animationToValue animated:NO];
@@ -155,6 +154,8 @@
         
         //Set progress
         [super setProgress:_animationFromValue + dt * (_animationToValue - _animationFromValue) animated:YES];
+        
+//        NSLog(@"%f", _animationFromValue + dt * (_animationToValue - _animationFromValue));
         [self setNeedsDisplay];
         
     });
@@ -165,8 +166,8 @@
 
 - (void)layoutSubviews
 {
-    _backgroundLayer.frame = self.bounds;
-    _progressLayer.frame = self.bounds;
+    _backgroundOutLayer.frame = self.bounds;
+    _progressOutLayer.frame = self.bounds;
     _percentageLabel.frame = self.bounds;
     
     //Redraw
@@ -192,13 +193,13 @@
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
-    [self drawBackground];
-    [self drawBackgroundSecond];
-    [self drawProgress];
-    [self drawProgressSecond];
+    [self drawBackgroundOut];
+    [self drawBackgroundIn];
+    [self drawProgressOut];
+    [self drawProgressIn];
 }
 
-- (void)drawBackground
+- (void)drawBackgroundOut
 {
     //Create parameters to draw background
     float startAngle = - M_PI_2;
@@ -213,10 +214,10 @@
     [path addArcWithCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:YES];
     
     //Set the path
-    _backgroundLayer.path = path.CGPath;
+    _backgroundOutLayer.path = path.CGPath;
 }
 
-- (void)drawBackgroundSecond
+- (void)drawBackgroundIn
 {
     //Create parameters to draw background
     float startAngle = - M_PI_2;
@@ -231,14 +232,14 @@
     [path addArcWithCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:YES];
     
     //Set the path
-    _backgroundSecondLayer.path = path.CGPath;
+    _backgroundInLayour.path = path.CGPath;
 }
 
-- (void)drawProgress
+- (void)drawProgressOut
 {
     //Create parameters to draw progress
     float startAngle = - M_PI_2;
-    float endAngle = startAngle + (2.0 * M_PI * self.progress);
+    float endAngle = startAngle + (2.0 * M_PI * self.progress * 0.1);
     CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.width / 2.0);
     CGFloat radius = (self.bounds.size.width - _backgroundLineWidth) / 2.0; // align center of the background
     
@@ -249,7 +250,7 @@
     [path addArcWithCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:YES];
     
     //Set the path
-    [_progressLayer setPath:path.CGPath];
+    [_progressOutLayer setPath:path.CGPath];
     
     //Update label
 //        _percentageLabel.text = [NSString stringWithFormat:@"%f(s)", self.progress*self.animationDuration];
@@ -257,7 +258,7 @@
     _percentageLabel.text = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
 }
 
-- (void)drawProgressSecond
+- (void)drawProgressIn
 {
     //Create parameters to draw progress
     float startAngle = - M_PI_2;
@@ -272,7 +273,7 @@
     [path addArcWithCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:YES];
     
     //Set the path
-    [_progressSecondLayer setPath:path.CGPath];
+    [_progressInLayour setPath:path.CGPath];
     
 }
 

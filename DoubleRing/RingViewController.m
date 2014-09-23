@@ -62,7 +62,8 @@
 
 - (void)reset
 {
-    [_progressView setProgress:0 animated:YES];
+    [_progressView setProgress:0 animated:NO];
+//    [_progressView setProgress:0 animated:YES];
     _progressSlider.enabled = YES;
 }
 
