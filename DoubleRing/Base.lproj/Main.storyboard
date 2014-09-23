@@ -425,12 +425,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Action:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-5j-IG0">
-                                <rect key="frame" x="20" y="387" width="54" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-M9-knb">
                                 <rect key="frame" x="239" y="282" width="122" height="30"/>
                                 <state key="normal" title="Animate Progress">
@@ -446,29 +440,6 @@
                                     <action selector="progressChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="LzE-UU-H5R"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sOe-Jm-v9J">
-                                <rect key="frame" x="20" y="416" width="560" height="29"/>
-                                <segments>
-                                    <segment title="None"/>
-                                    <segment title="Success"/>
-                                    <segment title="Failure"/>
-                                </segments>
-                                <connections>
-                                    <action selector="iconChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="aDg-ZR-CHU"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Percentage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10P-Xw-rcC">
-                                <rect key="frame" x="20" y="561" width="92.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17u-XM-0iA">
-                                <rect key="frame" x="120" y="556" width="51" height="31"/>
-                                <connections>
-                                    <action selector="showPercentage:" destination="B1A-92-sJ1" eventType="valueChanged" id="MoB-qJ-B61"/>
-                                </connections>
-                            </switch>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gvl-ns-Ftc" customClass="ProgressViewSegmentedRing">
                                 <rect key="frame" x="85" y="88" width="430" height="185.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -476,22 +447,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="10P-Xw-rcC" firstAttribute="centerY" secondItem="17u-XM-0iA" secondAttribute="centerY" id="8E3-DD-fT5"/>
-                            <constraint firstItem="sOe-Jm-v9J" firstAttribute="trailing" secondItem="NXV-bW-Dme" secondAttribute="trailing" id="8hY-oq-I50"/>
                             <constraint firstItem="uPI-M9-knb" firstAttribute="centerX" secondItem="NXV-bW-Dme" secondAttribute="centerX" id="AAF-yW-0H8"/>
-                            <constraint firstItem="sOe-Jm-v9J" firstAttribute="top" secondItem="Lx8-5j-IG0" secondAttribute="bottom" constant="8" symbolic="YES" id="BYd-dd-XhD"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="top" secondItem="uPI-M9-knb" secondAttribute="bottom" constant="37" id="EMC-mR-SAH"/>
-                            <constraint firstItem="NXV-bW-Dme" firstAttribute="leading" secondItem="Lx8-5j-IG0" secondAttribute="leading" id="Jue-we-9p4"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="leading" secondItem="6Pr-uL-pRc" secondAttribute="leading" id="JvM-TH-td9"/>
-                            <constraint firstItem="Lx8-5j-IG0" firstAttribute="top" secondItem="NXV-bW-Dme" secondAttribute="bottom" constant="8" symbolic="YES" id="MqV-Xu-4EF"/>
                             <constraint firstItem="Gvl-ns-Ftc" firstAttribute="top" secondItem="xR6-cx-NuE" secondAttribute="bottom" constant="25" id="NqZ-KL-MRI"/>
-                            <constraint firstItem="Lx8-5j-IG0" firstAttribute="leading" secondItem="sOe-Jm-v9J" secondAttribute="leading" id="QVb-KJ-jvg"/>
                             <constraint firstAttribute="trailing" secondItem="NXV-bW-Dme" secondAttribute="trailing" constant="20" symbolic="YES" id="UUn-kO-Ejw"/>
                             <constraint firstItem="Gvl-ns-Ftc" firstAttribute="leading" secondItem="LV9-su-dH3" secondAttribute="leading" constant="85" id="V4x-BU-qwD"/>
                             <constraint firstItem="uPI-M9-knb" firstAttribute="top" secondItem="Gvl-ns-Ftc" secondAttribute="bottom" constant="8" symbolic="YES" id="W3S-gG-oFy"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="top" secondItem="6Pr-uL-pRc" secondAttribute="bottom" constant="8" symbolic="YES" id="d5t-f1-HtC"/>
-                            <constraint firstItem="mTn-ca-mZ2" firstAttribute="top" secondItem="17u-XM-0iA" secondAttribute="bottom" constant="13" id="ePr-kg-eTV"/>
-                            <constraint firstItem="17u-XM-0iA" firstAttribute="leading" secondItem="10P-Xw-rcC" secondAttribute="trailing" constant="8" symbolic="YES" id="gzf-aq-nab"/>
                             <constraint firstItem="uPI-M9-knb" firstAttribute="centerX" secondItem="Gvl-ns-Ftc" secondAttribute="centerX" id="jXS-Zf-xgY"/>
                             <constraint firstItem="6Pr-uL-pRc" firstAttribute="leading" secondItem="LV9-su-dH3" secondAttribute="leading" constant="20" symbolic="YES" id="n8i-5N-TRg"/>
                         </constraints>
@@ -499,10 +462,8 @@
                     <navigationItem key="navigationItem" title="Double Ring" id="JoO-UH-GkE"/>
                     <connections>
                         <outlet property="animateButton" destination="uPI-M9-knb" id="RH6-ha-dac"/>
-                        <outlet property="iconControl" destination="sOe-Jm-v9J" id="KOl-Aq-RYX"/>
                         <outlet property="progressSlider" destination="NXV-bW-Dme" id="jkz-xN-pha"/>
                         <outlet property="progressView" destination="Gvl-ns-Ftc" id="xTZ-Zl-3h1"/>
-                        <outlet property="showPercentageSwitch" destination="17u-XM-0iA" id="NgP-9f-pgq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z16-DG-N5X" userLabel="First Responder" sceneMemberID="firstResponder"/>

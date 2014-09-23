@@ -9,7 +9,9 @@
 #import "DoubleRingViewController.h"
 
 @interface DoubleRingViewController ()
-
+@property (nonatomic, retain) IBOutlet DoubleRing *progressView;
+@property (nonatomic, retain) IBOutlet UISlider *progressSlider;
+@property (nonatomic, retain) IBOutlet UIButton *animateButton;
 @end
 
 @implementation DoubleRingViewController
@@ -35,37 +37,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)progressChanged:(id)sender
+- (IBAction)progressChanged:(id)sender
 {
     [_progressView setProgress:_progressSlider.value animated:NO];
 }
 
-- (void)animateProgress:(id)sender
+- (IBAction)animateProgress:(id)sender
 {
     //Disable other controls
     _progressSlider.enabled = NO;
-    _iconControl.enabled = NO;
-    _indeterminateSwitch.enabled = NO;
     
-    [self performSelector:@selector(setQuarter) withObject:Nil afterDelay:1];
-}
-
-- (void)setQuarter
-{
-    [_progressView setProgress:.25 animated:YES];
-    [self performSelector:@selector(setTwoThirds) withObject:nil afterDelay:3];
-}
-
-- (void)setTwoThirds
-{
-    [_progressView setProgress:.66 animated:YES];
-    [self performSelector:@selector(setThreeQuarters) withObject:nil afterDelay:1];
-}
-
-- (void)setThreeQuarters
-{
-    [_progressView setProgress:.75 animated:YES];
-    [self performSelector:@selector(setOne) withObject:nil afterDelay:1.5];
+    [self performSelector:@selector(setOne) withObject:Nil afterDelay:1];
 }
 
 - (void)setOne
@@ -77,62 +59,14 @@
 - (void)setComplete
 {
     [_progressView performAction:ProgressViewActionSuccess animated:YES];
-    [self performSelector:@selector(reset) withObject:nil afterDelay:1.5];
+    [self performSelector:@selector(reset) withObject:nil afterDelay:1];
 }
 
 - (void)reset
 {
     [_progressView performAction:ProgressViewActionNone animated:YES];
     [_progressView setProgress:0 animated:YES];
-    //Enable other controls
     _progressSlider.enabled = YES;
-    _iconControl.enabled = YES;
-    _indeterminateSwitch.enabled = YES;
-}
-
-- (void)iconChanged:(id)sender
-{
-    if (_iconControl.selectedSegmentIndex == 0) {
-        //Change progress view icon to none
-        [_progressView performAction:ProgressViewActionNone animated:YES];
-    } else if (_iconControl.selectedSegmentIndex == 1) {
-        //Change progress view icon to success
-        [_progressView performAction:ProgressViewActionSuccess animated:YES];
-    } else if (_iconControl.selectedSegmentIndex == 2) {
-        //Change to failure
-        [_progressView performAction:ProgressViewActionFailure animated:YES];
-    }
-}
-
-- (void)indeterminateChanged:(id)sender
-{
-    if (_indeterminateSwitch.on) {
-        _progressSlider.enabled = NO;
-        _iconControl.enabled = NO;
-        _animateButton.enabled = NO;
-        //Set to indeterminate mode
-        [_progressView setIndeterminate:YES];
-    } else {
-        _progressSlider.enabled = YES;
-        _iconControl.enabled = YES;
-        _animateButton.enabled = YES;
-        //Disable indeterminate mode
-        [_progressView setIndeterminate:NO];
-    }
-}
-
-- (void)showPercentage:(id)sender
-{
-    [_progressView setShowPercentage:_showPercentageSwitch.on];
-}
-
-- (void)separationChanged:(id)sender
-{
-    if (_separationControl.selectedSegmentIndex == 0) {
-        [_progressView setSegmentBoundaryType:SegmentBoundaryTypeWedge];
-    } else {
-        [_progressView setSegmentBoundaryType:SegmentBoundaryTypeRectangle];
-    }
 }
 
 @end

@@ -31,7 +31,7 @@
 @implementation DoubleRing
 {
     //Wether or not the corresponding values have been overriden by the user
-    BOOL _progressRingWidthOverriden;
+    BOOL _progressRingLineWidthOverriden;
     BOOL _segmentSeparationAngleOverriden;
     //The calculated angles of the concentric rings
     CGFloat outerRingAngle;
@@ -76,8 +76,8 @@
     self.backgroundColor = [UIColor clearColor];
     
     //Set defaut sizes
-    _progressRingWidth = fmaxf(self.bounds.size.width * .25, 1.0);
-    _progressRingWidthOverriden = NO;
+    _progressRingLineWidth = fmaxf(self.bounds.size.width * .25, 1.0);
+    _progressRingLineWidthOverriden = NO;
     _segmentSeparationAngleOverriden = NO;
     self.animationDuration = .3;
     _showPercentage = YES;
@@ -112,12 +112,13 @@
     
     //Set the label
     _percentageLabel = [[UILabel alloc] init];
-    _percentageLabel.font = [UIFont systemFontOfSize:((self.bounds.size.width - _progressRingWidth) / 5)];
+    _percentageLabel.font = [UIFont systemFontOfSize:((self.bounds.size.width - _progressRingLineWidth) / 5)];
     _percentageLabel.textColor = self.primaryColor;
     _percentageLabel.textAlignment = NSTextAlignmentCenter;
     _percentageLabel.contentMode = UIViewContentModeCenter;
     _percentageLabel.frame = self.bounds;
     [self addSubview:_percentageLabel];
+    
 }
 
 #pragma mark Appearance
@@ -138,12 +139,12 @@
 }
 
 
-- (void)setProgressRingWidth:(CGFloat)progressRingWidth
+- (void)setprogressRingLineWidth:(CGFloat)progressRingLineWidth
 {
-    _progressRingWidth = progressRingWidth;
-    _progressLayer.lineWidth = _progressRingWidth;
-    _backgroundLayer.lineWidth = _progressRingWidth;
-    _progressRingWidthOverriden = YES;
+    _progressRingLineWidth = progressRingLineWidth;
+    _progressLayer.lineWidth = _progressRingLineWidth;
+    _backgroundLayer.lineWidth = _progressRingLineWidth;
+    _progressRingLineWidthOverriden = YES;
     [self updateAngles];
     [self setNeedsDisplay];
     [self invalidateIntrinsicContentSize];
@@ -151,19 +152,8 @@
 
 - (void)setShowPercentage:(BOOL)showPercentage
 {
-    _showPercentage = showPercentage;
-    if (_showPercentage == YES) {
-        if (_percentageLabel.superview == nil) {
-            //Show the label if not already
-            [self addSubview:_percentageLabel];
-            [self setNeedsLayout];
-        }
-    } else {
-        if (_percentageLabel.superview != nil) {
-            //Hide the label if not already
-            [_percentageLabel removeFromSuperview];
-        }
-    }
+    [self addSubview:_percentageLabel];
+    [self setNeedsLayout];
 }
 
 - (void)setSegmentBoundaryType:(SegmentBoundaryType)segmentBoundaryType
@@ -366,11 +356,11 @@
     _iconLayer.frame = self.bounds;
     
     //Update font size
-    _percentageLabel.font = [UIFont systemFontOfSize:((self.bounds.size.width - _progressRingWidth) / 5)];
+    _percentageLabel.font = [UIFont systemFontOfSize:((self.bounds.size.width - _progressRingLineWidth) / 5)];
     
     //Update line widths if not overriden
-    if (!_progressRingWidthOverriden) {
-        _progressRingWidth = fmaxf(self.frame.size.width * .10, 1.0);
+    if (!_progressRingLineWidthOverriden) {
+        _progressRingLineWidth = fmaxf(self.frame.size.width * .10, 1.0);
     }
     
     [self updateAngles];
@@ -382,7 +372,7 @@
 - (CGSize)intrinsicContentSize
 {
     //This might need a little more fine tuning.
-    CGFloat base = _progressRingWidth * 2;
+    CGFloat base = _progressRingLineWidth * 2;
     
     return CGSizeMake(base, base);
 }
@@ -404,7 +394,7 @@
     //Calculate the outer ring angle for the progress segment.*/
     outerRingAngle = ((2.0 * M_PI) / (float)_numberOfSegments) - _segmentSeparationAngle;
     //Calculate the angle gap for the inner ring
-    _segmentSeparationInnerAngle = 2.0 * asinf(((self.bounds.size.width / 2.0) * sinf(_segmentSeparationAngle / 2.0)) / ((self.bounds.size.width / 2.0) - _progressRingWidth));
+    _segmentSeparationInnerAngle = 2.0 * asinf(((self.bounds.size.width / 2.0) * sinf(_segmentSeparationAngle / 2.0)) / ((self.bounds.size.width / 2.0) - _progressRingLineWidth));
     //Calculate the inner ring angle for the progress segment.*/
     innerRingAngle = ((2.0 * M_PI) / (float)_numberOfSegments) - _segmentSeparationInnerAngle;
 }
@@ -434,7 +424,7 @@
 {
     //Draw relative to a base size and percentage, that way the check can be drawn for any size.*/
     CGFloat radius = (self.frame.size.width / 2.0);
-    CGFloat size = (radius - _progressRingWidth) * .3;
+    CGFloat size = (radius - _progressRingLineWidth) * .3;
     
     //Create the path
     UIBezierPath *path = [UIBezierPath bezierPath];
@@ -450,7 +440,7 @@
     [path applyTransform:CGAffineTransformMakeRotation(-M_PI_4)];
     
     //Center it
-    [path applyTransform:CGAffineTransformMakeTranslation((radius + _progressRingWidth ) * .50 , 1.02 * radius)];
+    [path applyTransform:CGAffineTransformMakeTranslation((radius + _progressRingLineWidth ) * .50 , 1.02 * radius)];
     
     //Set path
     [_iconLayer setPath:path.CGPath];
@@ -461,7 +451,7 @@
 {
     //Calculate the size of the X
     CGFloat radius = (self.frame.size.width / 2.0);
-    CGFloat size = (radius - _progressRingWidth) * .3;
+    CGFloat size = (radius - _progressRingLineWidth) * .3;
     
     //Create the path for the X
     UIBezierPath *xPath = [UIBezierPath bezierPath];
@@ -511,9 +501,9 @@
         UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:(self.bounds.size.width / 2.0) startAngle:outerStartAngle endAngle:(outerStartAngle - outerRingAngle) clockwise:NO];
         //Create the inner ring segment
         if (_segmentBoundaryType == SegmentBoundaryTypeWedge) {
-            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingWidth startAngle:(outerStartAngle - outerRingAngle) endAngle:outerStartAngle clockwise:YES];
+            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingLineWidth startAngle:(outerStartAngle - outerRingAngle) endAngle:outerStartAngle clockwise:YES];
         } else if (_segmentBoundaryType == SegmentBoundaryTypeRectangle) {
-            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingWidth startAngle:innerStartAngle endAngle:innerStartAngle + innerRingAngle clockwise:YES];
+            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingLineWidth startAngle:innerStartAngle endAngle:innerStartAngle + innerRingAngle clockwise:YES];
         }
         
         [path closePath];
@@ -551,9 +541,9 @@
         UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:(self.bounds.size.width / 2.0) startAngle:outerStartAngle endAngle:(outerStartAngle + outerRingAngle) clockwise:YES];
         //Create the inner ring segment
         if (_segmentBoundaryType == SegmentBoundaryTypeWedge) {
-            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingWidth startAngle:(outerStartAngle + outerRingAngle) endAngle:outerStartAngle clockwise:NO];
+            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingLineWidth startAngle:(outerStartAngle + outerRingAngle) endAngle:outerStartAngle clockwise:NO];
         } else if (_segmentBoundaryType == SegmentBoundaryTypeRectangle) {
-            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingWidth startAngle:innerStartAngle endAngle:innerStartAngle - innerRingAngle clockwise:NO];
+            [path addArcWithCenter:center radius:(self.bounds.size.width / 2.0) - _progressRingLineWidth startAngle:innerStartAngle endAngle:innerStartAngle - innerRingAngle clockwise:NO];
         }
         
         [path closePath];
