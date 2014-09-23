@@ -11,7 +11,7 @@ typedef enum {
     SegmentBoundaryTypeRectangle
 } SegmentBoundaryType;
 
-#import "M13ProgressView.h"
+#import "ProgressView.h"
 
 /**Progress is shown by a ring split up into segments.*/
 @interface DoubleRing : ProgressView

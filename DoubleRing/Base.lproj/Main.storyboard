@@ -309,33 +309,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-ge-bSU" customClass="ProgressViewRing">
-                                <rect key="frame" x="60" y="87" width="480" height="200"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-ge-bSU" customClass="ProgressViewRing">
+                                <rect key="frame" x="60" y="87" width="480" height="310"/>
+                                <color key="backgroundColor" red="1" green="0.75622158120000005" blue="0.80221510419999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="60" y="87" width="280" height="200"/>
                                 </variation>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-s8-Urf">
-                                <rect key="frame" x="20" y="368" width="73" height="20.5"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-s8-Urf">
+                                <rect key="frame" x="28" y="443" width="73" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRd-v4-lCK">
-                                <rect key="frame" x="20" y="435" width="54" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indeterminate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC4-OJ-Izg">
-                                <rect key="frame" x="20" y="505" width="110.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-HJ-XLK">
-                                <rect key="frame" x="239" y="295" width="122" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-HJ-XLK">
+                                <rect key="frame" x="28" y="405" width="122" height="30"/>
                                 <state key="normal" title="Animate Progress">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -346,8 +334,8 @@
                                     <action selector="animateProgress:" destination="ULA-0c-2tB" eventType="touchUpInside" id="DWG-KX-r9D"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkF-4g-C91">
-                                <rect key="frame" x="18" y="362" width="564" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkF-4g-C91">
+                                <rect key="frame" x="26" y="482.5" width="564" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="18" y="362" width="364" height="31"/>
                                 </variation>
@@ -355,77 +343,51 @@
                                     <action selector="progressChanged:" destination="ULA-0c-2tB" eventType="valueChanged" id="EgC-zA-cVB"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QNr-po-U17">
-                                <rect key="frame" x="20" y="464" width="560" height="29"/>
-                                <segments>
-                                    <segment title="None"/>
-                                    <segment title="Success"/>
-                                    <segment title="Failure"/>
-                                </segments>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="xLl-Oe-G4T">
+                                <rect key="frame" x="95" y="545" width="372" height="31"/>
                                 <connections>
-                                    <action selector="iconChanged:" destination="ULA-0c-2tB" eventType="valueChanged" id="SJt-Og-UAs"/>
+                                    <action selector="speedChanged:" destination="ULA-0c-2tB" eventType="valueChanged" id="CLe-Y8-Xz0"/>
                                 </connections>
-                            </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5RN-xd-JOu">
-                                <rect key="frame" x="138" y="500" width="51" height="31"/>
-                                <connections>
-                                    <action selector="indeterminateChanged:" destination="ULA-0c-2tB" eventType="valueChanged" id="Vej-qp-Oau"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58J-PN-RUE">
-                                <rect key="frame" x="20" y="544" width="92.5" height="20.5"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TF-ME-Le6">
+                                <rect key="frame" x="28" y="533" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-Dt-4SQ">
-                                <rect key="frame" x="120" y="539" width="51" height="31"/>
-                                <connections>
-                                    <action selector="showPercentage:" destination="ULA-0c-2tB" eventType="valueChanged" id="xqx-PY-xXl"/>
-                                </connections>
-                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHG-Cg-e0u">
+                                <rect key="frame" x="28" y="562" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QNr-po-U17" firstAttribute="top" secondItem="PRd-v4-lCK" secondAttribute="bottom" constant="8" symbolic="YES" id="0Vc-zA-k6G"/>
                             <constraint firstItem="vMa-HJ-XLK" firstAttribute="centerX" secondItem="nkF-4g-C91" secondAttribute="centerX" id="BeB-8I-y5q"/>
-                            <constraint firstItem="5RN-xd-JOu" firstAttribute="top" secondItem="QNr-po-U17" secondAttribute="bottom" constant="8" symbolic="YES" id="BhP-LF-xtI"/>
                             <constraint firstItem="2Ny-ge-bSU" firstAttribute="top" secondItem="aJF-sY-M4S" secondAttribute="bottom" constant="23" id="Civ-xt-qwq"/>
-                            <constraint firstItem="5RN-xd-JOu" firstAttribute="leading" secondItem="KC4-OJ-Izg" secondAttribute="trailing" constant="8" symbolic="YES" id="GuB-qL-8wJ"/>
-                            <constraint firstItem="lmi-Dt-4SQ" firstAttribute="leading" secondItem="58J-PN-RUE" secondAttribute="trailing" constant="8" symbolic="YES" id="HdT-CP-he9"/>
-                            <constraint firstItem="58J-PN-RUE" firstAttribute="centerY" secondItem="lmi-Dt-4SQ" secondAttribute="centerY" id="Kks-cb-aG0"/>
-                            <constraint firstItem="5RN-xd-JOu" firstAttribute="centerY" secondItem="KC4-OJ-Izg" secondAttribute="centerY" id="NU5-zR-GCI"/>
-                            <constraint firstItem="58J-PN-RUE" firstAttribute="leading" secondItem="KC4-OJ-Izg" secondAttribute="leading" id="Ojv-V4-fz8"/>
                             <constraint firstItem="nkF-4g-C91" firstAttribute="top" secondItem="vMa-HJ-XLK" secondAttribute="bottom" constant="37" id="a9Y-3i-MZf"/>
                             <constraint firstItem="nkF-4g-C91" firstAttribute="top" secondItem="w3L-s8-Urf" secondAttribute="bottom" constant="8" symbolic="YES" id="dNo-5Z-bBA"/>
                             <constraint firstItem="w3L-s8-Urf" firstAttribute="leading" secondItem="nkF-4g-C91" secondAttribute="leading" id="dUc-SA-xkG"/>
-                            <constraint firstItem="QNr-po-U17" firstAttribute="leading" secondItem="KC4-OJ-Izg" secondAttribute="leading" id="eIR-A3-Z25"/>
                             <constraint firstItem="w3L-s8-Urf" firstAttribute="leading" secondItem="CKK-Lg-XO8" secondAttribute="leading" constant="20" symbolic="YES" id="gbW-dd-o8M"/>
-                            <constraint firstItem="QNr-po-U17" firstAttribute="trailing" secondItem="nkF-4g-C91" secondAttribute="trailing" id="h5V-bg-BWJ"/>
-                            <constraint firstItem="lmi-Dt-4SQ" firstAttribute="top" secondItem="5RN-xd-JOu" secondAttribute="bottom" constant="8" symbolic="YES" id="iad-ni-aCE"/>
                             <constraint firstItem="2Ny-ge-bSU" firstAttribute="leading" secondItem="CKK-Lg-XO8" secondAttribute="leading" constant="60" id="kuN-BU-vIo"/>
                             <constraint firstAttribute="trailing" secondItem="nkF-4g-C91" secondAttribute="trailing" constant="20" symbolic="YES" id="mTC-n7-dmY"/>
                             <constraint firstItem="vMa-HJ-XLK" firstAttribute="centerX" secondItem="2Ny-ge-bSU" secondAttribute="centerX" id="nGV-2g-0rX"/>
-                            <constraint firstItem="mB5-Hq-Bvu" firstAttribute="top" secondItem="lmi-Dt-4SQ" secondAttribute="bottom" constant="30" id="oen-AP-Xk7"/>
-                            <constraint firstItem="PRd-v4-lCK" firstAttribute="top" secondItem="nkF-4g-C91" secondAttribute="bottom" constant="8" symbolic="YES" id="ryH-Pv-jWg"/>
-                            <constraint firstItem="nkF-4g-C91" firstAttribute="leading" secondItem="PRd-v4-lCK" secondAttribute="leading" id="szV-kl-6FD"/>
                             <constraint firstItem="vMa-HJ-XLK" firstAttribute="top" secondItem="2Ny-ge-bSU" secondAttribute="bottom" constant="8" symbolic="YES" id="uBO-hE-2ij"/>
-                            <constraint firstItem="QNr-po-U17" firstAttribute="leading" secondItem="PRd-v4-lCK" secondAttribute="leading" id="wJ0-NU-p1a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ring" id="kNW-Xc-HH8"/>
                     <connections>
                         <outlet property="animateButton" destination="vMa-HJ-XLK" id="nta-xC-Pdp"/>
-                        <outlet property="iconControl" destination="QNr-po-U17" id="wld-5O-5YS"/>
-                        <outlet property="indeterminateSwitch" destination="5RN-xd-JOu" id="22f-hc-C9f"/>
                         <outlet property="progressSlider" destination="nkF-4g-C91" id="GEF-Us-60d"/>
                         <outlet property="progressView" destination="2Ny-ge-bSU" id="lae-X2-4NK"/>
-                        <outlet property="showPercentageSwitch" destination="lmi-Dt-4SQ" id="R18-Qd-m3O"/>
+                        <outlet property="speedLabel" destination="qHG-Cg-e0u" id="cqL-Cx-XW4"/>
+                        <outlet property="speedSlider" destination="xLl-Oe-G4T" id="p70-qc-T51"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMp-kP-EIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-558" y="-458"/>
+            <point key="canvasLocation" x="-477" y="-464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Akr-Gq-5ix">
@@ -457,35 +419,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvl-ns-Ftc" customClass="ProgressViewSegmentedRing">
-                                <rect key="frame" x="85" y="89" width="430" height="185.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pr-uL-pRc">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pr-uL-pRc">
                                 <rect key="frame" x="20" y="321" width="73" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-5j-IG0">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Action:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-5j-IG0">
                                 <rect key="frame" x="20" y="387" width="54" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segment Boundary:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-1L-eNG">
-                                <rect key="frame" x="20" y="452" width="153" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indeterminate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ0-Iz-hoO">
-                                <rect key="frame" x="20" y="522" width="110.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-M9-knb">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-M9-knb">
                                 <rect key="frame" x="239" y="282" width="122" height="30"/>
                                 <state key="normal" title="Animate Progress">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -494,13 +440,13 @@
                                     <action selector="animateProgress:" destination="B1A-92-sJ1" eventType="touchUpInside" id="5U8-Lm-sFK"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NXV-bW-Dme">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NXV-bW-Dme">
                                 <rect key="frame" x="18" y="349" width="564" height="31"/>
                                 <connections>
                                     <action selector="progressChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="LzE-UU-H5R"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sOe-Jm-v9J">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sOe-Jm-v9J">
                                 <rect key="frame" x="20" y="416" width="560" height="29"/>
                                 <segments>
                                     <segment title="None"/>
@@ -511,77 +457,51 @@
                                     <action selector="iconChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="aDg-ZR-CHU"/>
                                 </connections>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-Gd-Oaw">
-                                <rect key="frame" x="138" y="517" width="51" height="31"/>
-                                <connections>
-                                    <action selector="indeterminateChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="Vot-Nr-x9J"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10P-Xw-rcC">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Percentage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10P-Xw-rcC">
                                 <rect key="frame" x="20" y="561" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17u-XM-0iA">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17u-XM-0iA">
                                 <rect key="frame" x="120" y="556" width="51" height="31"/>
                                 <connections>
                                     <action selector="showPercentage:" destination="B1A-92-sJ1" eventType="valueChanged" id="MoB-qJ-B61"/>
                                 </connections>
                             </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jtf-Sw-vdx">
-                                <rect key="frame" x="20" y="481" width="560" height="29"/>
-                                <segments>
-                                    <segment title="Wedge"/>
-                                    <segment title="Rectangle"/>
-                                </segments>
-                                <connections>
-                                    <action selector="iconChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="2Qf-bt-Qcv"/>
-                                    <action selector="separationChanged:" destination="B1A-92-sJ1" eventType="valueChanged" id="b49-2H-u6D"/>
-                                </connections>
-                            </segmentedControl>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gvl-ns-Ftc" customClass="ProgressViewSegmentedRing">
+                                <rect key="frame" x="85" y="88" width="430" height="185.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="17u-XM-0iA" firstAttribute="top" secondItem="7Ej-Gd-Oaw" secondAttribute="bottom" constant="8" symbolic="YES" id="2qs-SR-fgh"/>
                             <constraint firstItem="10P-Xw-rcC" firstAttribute="centerY" secondItem="17u-XM-0iA" secondAttribute="centerY" id="8E3-DD-fT5"/>
                             <constraint firstItem="sOe-Jm-v9J" firstAttribute="trailing" secondItem="NXV-bW-Dme" secondAttribute="trailing" id="8hY-oq-I50"/>
                             <constraint firstItem="uPI-M9-knb" firstAttribute="centerX" secondItem="NXV-bW-Dme" secondAttribute="centerX" id="AAF-yW-0H8"/>
                             <constraint firstItem="sOe-Jm-v9J" firstAttribute="top" secondItem="Lx8-5j-IG0" secondAttribute="bottom" constant="8" symbolic="YES" id="BYd-dd-XhD"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="top" secondItem="uPI-M9-knb" secondAttribute="bottom" constant="37" id="EMC-mR-SAH"/>
-                            <constraint firstItem="Kp4-1L-eNG" firstAttribute="top" secondItem="sOe-Jm-v9J" secondAttribute="bottom" constant="8" symbolic="YES" id="FtP-iE-zFW"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="leading" secondItem="Lx8-5j-IG0" secondAttribute="leading" id="Jue-we-9p4"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="leading" secondItem="6Pr-uL-pRc" secondAttribute="leading" id="JvM-TH-td9"/>
-                            <constraint firstItem="7Ej-Gd-Oaw" firstAttribute="top" secondItem="jtf-Sw-vdx" secondAttribute="bottom" constant="8" symbolic="YES" id="Lyt-kc-5f5"/>
-                            <constraint firstItem="sOe-Jm-v9J" firstAttribute="leading" secondItem="Kp4-1L-eNG" secondAttribute="leading" id="M3G-Rq-uaE"/>
                             <constraint firstItem="Lx8-5j-IG0" firstAttribute="top" secondItem="NXV-bW-Dme" secondAttribute="bottom" constant="8" symbolic="YES" id="MqV-Xu-4EF"/>
                             <constraint firstItem="Gvl-ns-Ftc" firstAttribute="top" secondItem="xR6-cx-NuE" secondAttribute="bottom" constant="25" id="NqZ-KL-MRI"/>
-                            <constraint firstItem="sOe-Jm-v9J" firstAttribute="trailing" secondItem="jtf-Sw-vdx" secondAttribute="trailing" id="O79-Z3-KSS"/>
                             <constraint firstItem="Lx8-5j-IG0" firstAttribute="leading" secondItem="sOe-Jm-v9J" secondAttribute="leading" id="QVb-KJ-jvg"/>
                             <constraint firstAttribute="trailing" secondItem="NXV-bW-Dme" secondAttribute="trailing" constant="20" symbolic="YES" id="UUn-kO-Ejw"/>
                             <constraint firstItem="Gvl-ns-Ftc" firstAttribute="leading" secondItem="LV9-su-dH3" secondAttribute="leading" constant="85" id="V4x-BU-qwD"/>
                             <constraint firstItem="uPI-M9-knb" firstAttribute="top" secondItem="Gvl-ns-Ftc" secondAttribute="bottom" constant="8" symbolic="YES" id="W3S-gG-oFy"/>
-                            <constraint firstItem="nJ0-Iz-hoO" firstAttribute="leading" secondItem="10P-Xw-rcC" secondAttribute="leading" id="WyW-Km-dAl"/>
                             <constraint firstItem="NXV-bW-Dme" firstAttribute="top" secondItem="6Pr-uL-pRc" secondAttribute="bottom" constant="8" symbolic="YES" id="d5t-f1-HtC"/>
-                            <constraint firstItem="7Ej-Gd-Oaw" firstAttribute="centerY" secondItem="nJ0-Iz-hoO" secondAttribute="centerY" id="dCl-v6-bxS"/>
-                            <constraint firstItem="jtf-Sw-vdx" firstAttribute="top" secondItem="Kp4-1L-eNG" secondAttribute="bottom" constant="8" symbolic="YES" id="dMg-MD-zNS"/>
                             <constraint firstItem="mTn-ca-mZ2" firstAttribute="top" secondItem="17u-XM-0iA" secondAttribute="bottom" constant="13" id="ePr-kg-eTV"/>
                             <constraint firstItem="17u-XM-0iA" firstAttribute="leading" secondItem="10P-Xw-rcC" secondAttribute="trailing" constant="8" symbolic="YES" id="gzf-aq-nab"/>
                             <constraint firstItem="uPI-M9-knb" firstAttribute="centerX" secondItem="Gvl-ns-Ftc" secondAttribute="centerX" id="jXS-Zf-xgY"/>
                             <constraint firstItem="6Pr-uL-pRc" firstAttribute="leading" secondItem="LV9-su-dH3" secondAttribute="leading" constant="20" symbolic="YES" id="n8i-5N-TRg"/>
-                            <constraint firstItem="nJ0-Iz-hoO" firstAttribute="leading" secondItem="jtf-Sw-vdx" secondAttribute="leading" id="xMd-ED-E4Z"/>
-                            <constraint firstItem="7Ej-Gd-Oaw" firstAttribute="leading" secondItem="nJ0-Iz-hoO" secondAttribute="trailing" constant="8" symbolic="YES" id="yfU-y3-tZs"/>
-                            <constraint firstItem="jtf-Sw-vdx" firstAttribute="leading" secondItem="Kp4-1L-eNG" secondAttribute="leading" id="zRe-s2-HzS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Segmented Ring" id="JoO-UH-GkE"/>
+                    <navigationItem key="navigationItem" title="Double Ring" id="JoO-UH-GkE"/>
                     <connections>
                         <outlet property="animateButton" destination="uPI-M9-knb" id="RH6-ha-dac"/>
                         <outlet property="iconControl" destination="sOe-Jm-v9J" id="KOl-Aq-RYX"/>
-                        <outlet property="indeterminateSwitch" destination="7Ej-Gd-Oaw" id="gE5-L6-u4l"/>
                         <outlet property="progressSlider" destination="NXV-bW-Dme" id="jkz-xN-pha"/>
                         <outlet property="progressView" destination="Gvl-ns-Ftc" id="xTZ-Zl-3h1"/>
-                        <outlet property="separationControl" destination="jtf-Sw-vdx" id="yKK-Bb-vUX"/>
                         <outlet property="showPercentageSwitch" destination="17u-XM-0iA" id="NgP-9f-pgq"/>
                     </connections>
                 </viewController>

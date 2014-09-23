@@ -12,20 +12,8 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewRing.h"
+#import "ProgressViewRing.h"
 
 @interface RingViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet ProgressViewRing *progressView;
-@property (nonatomic, retain) IBOutlet UISlider *progressSlider;
-@property (nonatomic, retain) IBOutlet UIButton *animateButton;
-@property (nonatomic, retain) IBOutlet UISegmentedControl *iconControl;
-@property (nonatomic, retain) IBOutlet UISwitch *indeterminateSwitch;
-@property (nonatomic, retain) IBOutlet UISwitch *showPercentageSwitch;
-
-- (IBAction)animateProgress:(id)sender;
-- (IBAction)progressChanged:(id)sender;
-- (IBAction)iconChanged:(id)sender;
-- (IBAction)indeterminateChanged:(id)sender;
-- (IBAction)showPercentage:(id)sender;
 @end
