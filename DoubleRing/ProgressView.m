@@ -1,5 +1,5 @@
 //
-//  RingViewController.h
+//  ProgressView.m
 //  ProgressView
 //
 /*Copyright (c) 2013 Brandon McQuilkin
@@ -11,9 +11,27 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
-#import "ProgressRingView.h"
+#import "ProgressView.h"
 
-@interface RingViewController : UIViewController
+@implementation ProgressView
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated
+{
+    _progress = progress;
+}
+
+- (void)performAction:(ProgressViewAction)action animated:(BOOL)animated
+{
+    //To be overriden in subclasses
+}
 
 @end

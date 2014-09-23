@@ -15,7 +15,7 @@
 		BD06E1DD19CEA1B300BB21A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD06E1DB19CEA1B300BB21A1 /* LaunchScreen.xib */; };
 		BD06E1E919CEA1B300BB21A1 /* DoubleRingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1E819CEA1B300BB21A1 /* DoubleRingTests.m */; };
 		BD06E20B19CEA1C600BB21A1 /* RingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1F919CEA1C600BB21A1 /* RingViewController.m */; };
-		BD06E20C19CEA1C600BB21A1 /* ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FB19CEA1C600BB21A1 /* ProgressViewRing.m */; };
+		BD06E20C19CEA1C600BB21A1 /* ProgressRingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FB19CEA1C600BB21A1 /* ProgressRingView.m */; };
 		BD06E20D19CEA1C600BB21A1 /* SegmentedRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FD19CEA1C600BB21A1 /* SegmentedRingViewController.m */; };
 		BD06E20E19CEA1C600BB21A1 /* ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E1FF19CEA1C600BB21A1 /* ProgressViewSegmentedRing.m */; };
 		BD06E20F19CEA1C600BB21A1 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD06E20119CEA1C600BB21A1 /* ProgressView.m */; };
@@ -50,8 +50,8 @@
 		BD06E1E819CEA1B300BB21A1 /* DoubleRingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleRingTests.m; sourceTree = "<group>"; };
 		BD06E1F819CEA1C600BB21A1 /* RingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingViewController.h; sourceTree = "<group>"; };
 		BD06E1F919CEA1C600BB21A1 /* RingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingViewController.m; sourceTree = "<group>"; };
-		BD06E1FA19CEA1C600BB21A1 /* ProgressViewRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewRing.h; sourceTree = "<group>"; };
-		BD06E1FB19CEA1C600BB21A1 /* ProgressViewRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewRing.m; sourceTree = "<group>"; };
+		BD06E1FA19CEA1C600BB21A1 /* ProgressRingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressRingView.h; sourceTree = "<group>"; };
+		BD06E1FB19CEA1C600BB21A1 /* ProgressRingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressRingView.m; sourceTree = "<group>"; };
 		BD06E1FC19CEA1C600BB21A1 /* SegmentedRingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedRingViewController.h; sourceTree = "<group>"; };
 		BD06E1FD19CEA1C600BB21A1 /* SegmentedRingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SegmentedRingViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BD06E1FE19CEA1C600BB21A1 /* ProgressViewSegmentedRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ProgressViewSegmentedRing.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -107,8 +107,8 @@
 			children = (
 				BD06E1F819CEA1C600BB21A1 /* RingViewController.h */,
 				BD06E1F919CEA1C600BB21A1 /* RingViewController.m */,
-				BD06E1FA19CEA1C600BB21A1 /* ProgressViewRing.h */,
-				BD06E1FB19CEA1C600BB21A1 /* ProgressViewRing.m */,
+				BD06E1FA19CEA1C600BB21A1 /* ProgressRingView.h */,
+				BD06E1FB19CEA1C600BB21A1 /* ProgressRingView.m */,
 				BD06E1FC19CEA1C600BB21A1 /* SegmentedRingViewController.h */,
 				BD06E1FD19CEA1C600BB21A1 /* SegmentedRingViewController.m */,
 				BD06E1FE19CEA1C600BB21A1 /* ProgressViewSegmentedRing.h */,
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD06E20E19CEA1C600BB21A1 /* ProgressViewSegmentedRing.m in Sources */,
-				BD06E20C19CEA1C600BB21A1 /* ProgressViewRing.m in Sources */,
+				BD06E20C19CEA1C600BB21A1 /* ProgressRingView.m in Sources */,
 				BD06E1D519CEA1B300BB21A1 /* ViewController.m in Sources */,
 				BD06E20F19CEA1C600BB21A1 /* ProgressView.m in Sources */,
 				BD06E1D219CEA1B300BB21A1 /* AppDelegate.m in Sources */,

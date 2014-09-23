@@ -1,5 +1,5 @@
 //
-//  RingViewController.h
+//  ProgressVewSegmentedRing.h
 //  ProgressView
 //
 /*Copyright (c) 2013 Brandon McQuilkin
@@ -11,9 +11,28 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
-#import "ProgressRingView.h"
+typedef enum {
+    SegmentBoundaryTypeWedge,
+    SegmentBoundaryTypeRectangle
+} SegmentBoundaryType;
 
-@interface RingViewController : UIViewController
+#import "ProgressView.h"
+
+/**Progress is shown by a ring split up into segments.*/
+@interface ProgressViewSegmentedRing : ProgressView
+
+/**@name Appearance*/
+/**The width of the progress ring in points.*/
+@property (nonatomic, assign) CGFloat progressRingWidth;
+/**The number of segments to display in the progress view.*/
+@property (nonatomic, assign) NSInteger numberOfSegments;
+/**The angle of the separation between the segments in radians.*/
+@property (nonatomic, assign) CGFloat segmentSeparationAngle;
+/**The type of boundary between segments.*/
+@property (nonatomic, assign) SegmentBoundaryType segmentBoundaryType;
+/**@name Percentage*/
+/**Wether or not to display a percentage inside the ring.*/
+@property (nonatomic, assign) BOOL showPercentage;
+
 
 @end

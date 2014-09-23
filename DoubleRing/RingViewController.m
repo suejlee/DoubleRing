@@ -6,7 +6,7 @@
 #import "RingViewController.h"
 
 @interface RingViewController ()
-@property (nonatomic, retain) IBOutlet ProgressViewRing *progressView;
+@property (nonatomic, retain) IBOutlet ProgressRingView *progressView;
 @property (nonatomic, retain) IBOutlet UISlider *progressSlider;
 @property (nonatomic, retain) IBOutlet UIButton *animateButton;
 @property (weak, nonatomic) IBOutlet UISlider *speedSlider;
@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [_progressView setAnimationDuration:_speedSlider.value];
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -54,20 +56,13 @@
     _progressSlider.enabled = NO;
 
     [_progressView setProgress:1 animated:YES];
-    [self performSelector:@selector(setComplete) withObject:nil afterDelay:_progressView.animationDuration + .5];
-}
-
-- (void)setComplete
-{
-    [_progressView performAction:ProgressViewActionSuccess animated:YES];
     [self performSelector:@selector(reset) withObject:nil afterDelay:1.5];
+
 }
 
 - (void)reset
 {
-    [_progressView performAction:ProgressViewActionNone animated:YES];
     [_progressView setProgress:0 animated:YES];
-    //Enable other controls
     _progressSlider.enabled = YES;
 }
 

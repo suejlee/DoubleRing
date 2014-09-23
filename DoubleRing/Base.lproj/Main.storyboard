@@ -309,7 +309,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-ge-bSU" customClass="ProgressViewRing">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-ge-bSU" customClass="ProgressRingView">
                                 <rect key="frame" x="60" y="87" width="480" height="310"/>
                                 <color key="backgroundColor" red="1" green="0.75622158120000005" blue="0.80221510419999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
